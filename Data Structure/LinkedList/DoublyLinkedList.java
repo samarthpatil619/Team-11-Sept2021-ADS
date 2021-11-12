@@ -193,24 +193,21 @@ public class DoublyLinkedList {
     public static void main(String[] args)
     {
         DoublyLinkedlistFunction DF = new DoublyLinkedlistFunction();
-
-
         DF.insertAtStart(15);
         DF.insertAtStart(25);
         DF.insertAtStart(35);
         DF.insertAtEnd(45);
         DF.insertAt(2,65);
-        DF.insertAt(0,90);
+        System.out.println("Forward");
         DF.displayForward();
         System.out.println();
-       // DF.deleteAtStart();
-        DF.deleteAtEnd();
-
-        DF.displayForward();
-
-        System.out.println();
-
+        System.out.println("Backward");
         DF.dispalyBackward();
         System.out.println();
+        System.out.println();
+      //  DF.deleteAtEnd();
+        DF.deleteAt(3);
+        DF.displayForward();
+        
     }
 }
