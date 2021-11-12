@@ -131,9 +131,29 @@ class DoublyLinkedlistFunction
 
     }
 
-    void deleteAt()
+    void deleteAt(int index)
     {
-
+         int count = countNum();
+        Node n=head;
+        if(index==0)
+        {
+            deleteAtStart();
+        }
+        if(index==count)
+        {
+            deleteAtEnd();
+        }
+        else
+        {
+            int i =1;
+            while(i<index)
+            {
+                i++;
+                n=n.next;
+            }
+            n.next=n.next.next;
+            n.next.prev=n;
+        }
     }
 
 
